@@ -1,0 +1,22 @@
+Bought myself a cheap knock off 5 inch display. Now the internet is full of bad advice how to do stuff 
+and most times "this just made it work for me", but no explaination or validation if this is really the solution.
+Your car tends to pull to the left, what worked for me was adapting the steering wheel. Only problem is that it
+behaves strange in thight corners and goes everywhere when it rains. Maybe the good solution was to repair the tire that was flat.
+
+I'm starting of with a Raspberry pi 3B+. The goal is to have OctoDash running on my pi on Buster Lite with a 5 inch display.
+That means installing OctoPrint and OctoDash out of the box - well you could do another gui based app
+
+So what is the steps to investigate here?
+1. Get the display running with touchscreen, even be able to calibrate
+2. Run a gui based app on the screen
+3. Starting in kiosk mode at boot time
+4. Securing the pi with certificates
+
+I'm already familiair with setting up a rpi, but for reference you could start with 
+https://www.raspberrypi.org/forums/viewtopic.php?p=890408#p890408
+
+Small remark on Buster on 02NOV2019, sudo apt upgrade takes 6.5 hours. So nightly upgrade is adviced. And since I want to start 
+the experiments with a clean slate, I just prepare the pi evening before and run the upgrade to be used the next day. 
+
+Experiment 1: Getting the display (knock off XTP2046 5 inch 800x480) running.
+Out of the box it runs. You will get a console session when booting. But no gui thingy yet. At least not with Buster Lite.
