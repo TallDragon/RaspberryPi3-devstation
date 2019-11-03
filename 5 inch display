@@ -17,6 +17,12 @@ https://www.raspberrypi.org/forums/viewtopic.php?p=890408#p890408
 
 Small remark on Buster on 02NOV2019, sudo apt upgrade takes 6.5 hours. So nightly upgrade is adviced. And since I want to start 
 the experiments with a clean slate, I just prepare the pi evening before and run the upgrade to be used the next day. 
+I run
+
+sudo apt update
+sudo apt upgrade
+sudo apt upgrade-dist
+sudo apt clean
 
 Experiment 1: Getting the display (knock off XTP2046 5 inch 800x480) running.
 Out of the box it runs. You will get a console session when booting. But no gui thingy yet. At least not with Buster Lite.
@@ -33,9 +39,11 @@ X server (usually X.Org)
 Window manager (Openbox, XFWM, …)
 Desktop environment (PIXEL, LXDE, MATE, …)
 Login manager (for example LightDM)
-However, we only want to run a single application (the web browser) in full screen – so we don’t need a desktop environment. And we already have autologin enabled (and no other users will ever use the Pi) – so we don’t need a login manager either.
+However, we only want to run a single application (the web browser) in full screen – so we don’t need a desktop environment. And we
+already have autologin enabled (and no other users will ever use the Pi) – so we don’t need a login manager either.
 
 The bare minimum we need are X server and window manager. Let’s install just that:
 
 *sudo apt-get install --no-install-recommends xserver-xorg x11-xserver-utils xinit openbox*
 </code>
+
